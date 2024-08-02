@@ -1,0 +1,259 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red13\green110\blue236;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c52549\c94118;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0 \cb2 \expnd0\expndtw0\kerning0
+<!DOCTYPE html>\cb1 \
+\cb2 <html lang="en">\cb1 \
+\cb2 <head>\cb1 \
+\cb2 \'a0\'a0\'a0 <meta charset="UTF-8">\cb1 \
+\cb2 \'a0\'a0\'a0 <meta name="viewport" content="width=device-width, initial-scale=1.0">\cb1 \
+\cb2 \'a0\'a0\'a0 <title>Brett Towill (THE GAME)</title>\cb1 \
+\cb2 \'a0\'a0\'a0 <style>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 body \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-family: 'Arial', sans-serif;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 padding: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 display: flex;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 justify-content: center;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 align-items: center;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 height: 100vh;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-color: #222;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 overflow: hidden;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #menu, #gameCanvas, #gameOverScreen \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 display: none;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 position: absolute;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 top: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 left: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 right: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 bottom: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 justify-content: center;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 align-items: center;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 flex-direction: column;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: white;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #menu \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 display: flex;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background: url('{\field{\*\fldinst{HYPERLINK "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXrrg8ZHmUodyEBuzS91itgUOcetRfN4IDkw&s"}}{\fldrslt \cf3 \ul \ulc3 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXrrg8ZHmUodyEBuzS91itgUOcetRfN4IDkw&s}}') no-repeat center center;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-size: cover;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #menu h1 \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-size: 48px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin-bottom: 20px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 text-shadow: 2px 2px 4px #000;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #menu button, #gameOverScreen button \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 padding: 15px 30px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-size: 20px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 cursor: pointer;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 border-radius: 10px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 border: none;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-color: #4CAF50;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: white;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: 10px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 transition: background-color 0.3s ease, transform 0.3s ease;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 text-shadow: 2px 2px 4px #000;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #menu button:hover, #gameOverScreen button:hover \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-color: #45a049;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 transform: scale(1.05);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 canvas \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 background-color: #e0f7fa;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 border: 2px solid #0288d1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 display: block;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: auto;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 h2 \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 position: absolute;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 top: 10px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 left: 10px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin: 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-size: 24px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: #0288d1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #scoreDisplay \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 position: absolute;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 top: 50px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 left: 10px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-size: 20px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 color: #0288d1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #gameOverScreen \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 display: none;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 #gameOverScreen h1 \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 font-size: 48px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 margin-bottom: 20px;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0 </style>\cb1 \
+\cb2 </head>\cb1 \
+\cb2 <body>\cb1 \
+\cb2 \'a0\'a0\'a0 <div id="menu">\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <h1>Brett Towill (THE GAME)</h1>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button id="startButton">Start Game</button>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button id="instructionsButton">Instructions</button>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button id="exitButton">Exit</button>\cb1 \
+\cb2 \'a0\'a0\'a0 </div>\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0 <canvas id="gameCanvas" width="400" height="400"></canvas>\cb1 \
+\cb2 \'a0\'a0\'a0 <h2>Brett Towill (THE GAME)</h2>\cb1 \
+\cb2 \'a0\'a0\'a0 <div id="scoreDisplay">Score: 0</div>\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0 <div id="gameOverScreen">\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <h1>Game Over</h1>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button id="retryButton">Retry</button>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button id="menuButton">Back to Menu</button>\cb1 \
+\cb2 \'a0\'a0\'a0 </div>\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0 <script>\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const canvas = document.getElementById('gameCanvas');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const ctx = canvas.getContext('2d');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const menu = document.getElementById('menu');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const startButton = document.getElementById('startButton');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const instructionsButton = document.getElementById('instructionsButton');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const exitButton = document.getElementById('exitButton');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const scoreDisplay = document.getElementById('scoreDisplay');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const gameOverScreen = document.getElementById('gameOverScreen');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const retryButton = document.getElementById('retryButton');\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const menuButton = document.getElementById('menuButton');\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const tileCount = 20;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 const tileSize = canvas.width / tileCount;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let ratX = 10;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let ratY = 10;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let cheeseX = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let cheeseY = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let xVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let yVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let size = 1; // Start with the size of the rat being 1 tile\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let score = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 let gameRunning = true;\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 document.addEventListener('keydown', keyDown);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 startButton.addEventListener('click', startGame);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 instructionsButton.addEventListener('click', showInstructions);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 exitButton.addEventListener('click', exitGame);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 retryButton.addEventListener('click', startGame);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 menuButton.addEventListener('click', showMenu);\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function keyDown(event) \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (event.keyCode === 37 && xVelocity === 0) \{ // Left\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 xVelocity = -1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 yVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (event.keyCode === 38 && yVelocity === 0) \{ // Up\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 xVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 yVelocity = -1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (event.keyCode === 39 && xVelocity === 0) \{ // Right\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 xVelocity = 1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 yVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (event.keyCode === 40 && yVelocity === 0) \{ // Down\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 xVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 yVelocity = 1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function gameLoop() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (!gameRunning) return;\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ratX += xVelocity;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ratY += yVelocity;\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (ratX < 0 || ratX >= tileCount || ratY < 0 || ratY >= tileCount) \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 endGame();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ctx.clearRect(0, 0, canvas.width, canvas.height);\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 // Draw cheese\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ctx.font = tileSize + 'px Arial';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ctx.fillText('
+\f1 \uc0\u55358 \u56768 
+\f0 ', cheeseX * tileSize, (cheeseY + 1) * tileSize);\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 // Draw rat\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ctx.font = (size * tileSize) + 'px Arial';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ctx.fillText('
+\f1 \uc0\u55357 \u56320 
+\f0 ', ratX * tileSize, (ratY + 1) * tileSize);\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 if (ratX === cheeseX && ratY === cheeseY) \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 size++;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 score++;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 cheeseX = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 cheeseY = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 scoreDisplay.textContent = `Score: $\{score\}`;\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 setTimeout(gameLoop, 1000 / 10); // 10 FPS\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function startGame() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 menu.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameOverScreen.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 canvas.style.display = 'block';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 scoreDisplay.style.display = 'block';\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ratX = 10;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 ratY = 10;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 cheeseX = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 cheeseY = Math.floor(Math.random() * tileCount);\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 xVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 yVelocity = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 size = 1;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 score = 0;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameRunning = true;\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameLoop();\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function showInstructions() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 alert("Use the arrow keys to move the rat 
+\f1 \uc0\u55357 \u56320 
+\f0  and collect cheese 
+\f1 \uc0\u55358 \u56768 
+\f0 . The game ends if you hit the wall!");\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function endGame() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameRunning = false;\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 canvas.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 scoreDisplay.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameOverScreen.style.display = 'flex';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function showMenu() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 gameOverScreen.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 menu.style.display = 'flex';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 canvas.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 scoreDisplay.style.display = 'none';\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 function exitGame() \{\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 window.close(); // This may not work in all browsers due to security reasons\cb1 \
+\cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 \}\cb1 \
+\cb2 \'a0\'a0\'a0 </script>\cb1 \
+\cb2 </body>\cb1 \
+\cb2 </html>}
